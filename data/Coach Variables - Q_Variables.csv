@@ -1,0 +1,280 @@
+Variable;Format;Name;Values;Type;Computation / Comment;Operator
+;;;;;;
+MONITORfull;;;;;;
+;;;;;;
+$Q_S033_PA;Number;S33 POSITIVE ACTIVATION;01. Jul;Scale;MEAN($Q_S033_02r,$Q_S033_04,$Q_S033_07,$Q_S033_09r);MEAN
+$Q_S033_PA_BZ;Number;S33 POSITIVE ACTIVATION Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S033_PA_BV;Number;S33 POSITIVE ACTIVATION Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+$Q_S033_PA_DIS;Number;S33 POSITIVE ACTIVATION Dispersion;0-0.707;Value;STABW($Q_x)/$B_x_SR;COMPLEX4
+$Q_S033_PA_DISV;String;S33 POSITIVE ACTIVATION Dispersion Valuation;tief, mittel, hoch;Unicode;IF($Q_x_DIS<$B_CO_disp1;
+;;;;;;
+$Q_S033_NA;Number;S33 NEGATIVE ACTIVATION;01. Jul;Scale;MEAN($Q_S033_03r,$Q_S033_05,$Q_S033_08,$Q_S033_10r);MEAN
+$Q_S033_NA_BZ;Number;S33 NEGATIVE ACTIVATION Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S033_NA_BV;Number;S33 NEGATIVE ACTIVATION Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ>$B_CO_neg1;
+$Q_S033_NA_DIS;Number;S33 NEGATIVE ACTIVATION Dispersion;0-0.707;Value;STABW($Q_x)/$B_x_SR;COMPLEX4
+$Q_S033_NA_DISV;String;S33 NEGATIVE ACTIVATION Dispersion Valuation;tief, mittel, hoch;String;IF($Q_x_DIS<$B_CO_disp1;
+;;;;;;
+$Q_S033_02;Number;S33 POSITIVE ACTIVATION Energy;01. Jul;Item;;
+$Q_S033_02r;Number;S33 POSITIVE ACTIVATION Energy rev;01. Jul;Item reversed;RECODE $Q_S033_02 INTO $Q_S033_02r (7=1,6=2,5=3,4=4,3=5,2=6,1=7);RECODE_7
+$Q_S033_03;Number;S33 NEGATIVE ACTIVATION Stress;01. Jul;Item;;
+$Q_S033_03r;Number;S33 NEGATIVE ACTIVATION Stress rev;01. Jul;Item reversed;RECODE $Q_S033_03 INTO $Q_S033_03r (7=1,6=2,5=3,4=4,3=5,2=6,1=7);RECODE_7
+$Q_S033_04;Number;S33 POSITIVE ACTIVATION Awake;01. Jul;Item;;
+$Q_S033_05;Number;S33 NEGATIVE ACTIVATION Angry;01. Jul;Item;;
+$Q_S033_06;Number;S33 VALENCE Happy;01. Jul;Item;;
+$Q_S033_07;Number;S33 POSITIVE ACTIVATION Motivated;01. Jul;Item;;
+$Q_S033_08;Number;S33 NEGATIVE ACTIVATION Nervous;01. Jul;Item;;
+$Q_S033_09;Number;S33 POSITIVE ACTIVATION Thrilled;01. Jul;Item;;
+$Q_S033_09r;Number;S33 POSITIVE ACTIVATION Thrilled rev;01. Jul;Item reversed;RECODE $Q_S033_09 INTO $Q_S033_09r (7=1,6=2,5=3,4=4,3=5,2=6,1=7);RECODE_7
+$Q_S033_10;Number;S33 NEGATIVE ACTIVATION Concerned;01. Jul;Item;;
+$Q_S033_10r;Number;S33 NEGATIVE ACTIVATION Concerned rev;01. Jul;Item reversed;RECODE $Q_S033_10 INTO $Q_S033_10r (7=1,6=2,5=3,4=4,3=5,2=6,1=7);RECODE_7
+;;;;;;
+$Q_F001;Number;F1 JOB RESOURCES;01. Mai;Factor;MEAN($Q_S009,$Q_S010,$Q_S011,$Q_S012,$Q_S013,$Q_S014,$Q_S015);MEAN
+$Q_F001_BZ;Number;F1 JOB RESOURCES Benchmark Z-Value;-3 to +3;Z-Value;($Q_F001-$B_F001_PM)/$B_F001_PS;COMPLEX1
+$Q_F001_BV;Number;F1 JOB RESOURCES Benchmark Valuation;Unicode;Emoji;IF($Q_F001_BZ<$B_CO_pos1;
+$Q_F001_DIS;Number;F1 JOB RESOURCES Dispersion;0-0.707;Value;STABW($Q_F001)/$B_F001_SR;COMPLEX4
+$Q_F001_DISV;String;F1 JOB RESOURCES Dispersion Valuation;klein, mittel, hoch;String;IF($Q_F001_DIS<$B_CO_disp1;
+$Q_F001_N;Number;F1 JOB RESOURCES Valid N;;;;
+;;;;;;
+$Q_F002;Number;F2 JOB DEMANDS;01. Mai;Factor;MEAN($Q_S018,$Q_S019,$Q_S020);MEAN
+$Q_F002_BZ;Number;F2 JOB DEMANDS Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_F002_BV;Number;F2 JOB DEMANDS Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ>$B_CO_neg1;
+$Q_F002_DIS;Number;F2 JOB DEMANDS Dispersion;0-0.707;Value;STABW($Q_x)/$B_x_SR;COMPLEX4
+$Q_F002_DISV;String;F2 JOB DEMANDS Dispersion Valuation;tief, mittel, hoch;String;IF($Q_x_DIS<$B_CO_disp1;
+$Q_F002_N;Number;F2 JOB DEMANDS Valid N;;;;
+;;;;;;
+$Q_I001;Number;I1 JR/JD;0.2-5;Index;$Q_F001/$Q_F002;DIV
+$Q_I001_BZ;Number;I1 JR/JD Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_I001_BV;Number;I1 JR/JD Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+$Q_I001_DIS;Number;I1 JR/JD Dispersion;0-0.707;Value;STABW($Q_x)/$B_x_SR;COMPLEX4
+$Q_I001_DISV;String;I1 JR/JD Dispersion Valuation;tief, mittel, hoch;String;IF($Q_x_DIS<$B_CO_disp1;
+;;;;;;
+$Q_S009;Number;S9 CONTROL;01. Mai;Scale;MEAN($Q_S009_01,$Q_S009_02,$Q_S009_03,$Q_S009_04,$Q_S009_05,$Q_S009_06);MEAN
+$Q_S009_BZ;Number;S9 CONTROL Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S009_BV;Number;S9 CONTROL Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+$Q_S009_01;Number;S9 CONTROL Break;1-5 / -1;Item;;
+$Q_S009_02;Number;S9 CONTROL Speed;1-5 / -1;Item;;
+$Q_S009_03;Number;S9 CONTROL Content;1-5 / -1;Item;;
+$Q_S009_04;Number;S9 CONTROL Form;1-5 / -1;Item;;
+$Q_S009_05;Number;S9 CONTROL Execution;1-5 / -1;Item;;
+$Q_S009_06;Number;S9 CONTROL Time;1-5 / -1;Item;;
+;;;;;;
+$Q_S010;Number;S10 ROLE;01. Mai;Scale;MEAN($Q_S010_01,$Q_S010_02,$Q_S010_03,$Q_S010_04,$Q_S010_05);MEAN
+$Q_S010_BZ;Number;S10 ROLE Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S010_BV;Number;S10 ROLE Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+$Q_S010_01;Number;S10 ROLE Expectation;1-5 / -1;Item;;
+$Q_S010_02;Number;S10 ROLE Goal;1-5 / -1;Item;;
+$Q_S010_03;Number;S10 ROLE Approach;1-5 / -1;Item;;
+$Q_S010_04;Number;S10 ROLE Duties;1-5 / -1;Item;;
+$Q_S010_05;Number;S10 ROLE Strategy;1-5 / -1;Item;;
+;;;;;;
+$Q_S011;Number;S11 COMPETENCY;01. Mai;Scale;MEAN($Q_S011_01,$Q_S011_02,$Q_S011_03);MEAN
+$Q_S011_BZ;Number;S11 COMPETENCY Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S011_BV;Number;S11 COMPETENCY Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+$Q_S011_01;Number;S11 COMPETENCY Development;1-5 / -1;Item;;
+$Q_S011_02;Number;S11 COMPETENCY Career;1-5 / -1;Item;;
+$Q_S011_03;Number;S11 COMPETENCY Learning;1-5 / -1;Item;;
+;;;;;;
+$Q_S012;Number;S12 VARIETY;01. Mai;Scale;MEAN($Q_S012_01,$Q_S012_02,$Q_S012_03r);MEAN
+$Q_S012_BZ;Number;S12 VARIETY Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S012_BV;Number;S12 VARIETY Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+$Q_S012_01;Number;S12 VARIETY Daily;1-5 / -1;Item;;
+$Q_S012_02;Number;S12 VARIETY Different;1-5 / -1;Item;;
+$Q_S012_03;Number;S12 VARIETY Same;1-5 / -1;Item;;
+$Q_S012_03r;Number;S12 VARIETY Same rev;1-5 / -1;Item reversed;RECODE $Q_S012_03 INTO $Q_S012_03r (5=1,4=2,3=3,2=4,1=5);RECODE_5
+;;;;;;
+$Q_S013;Number;S13 SUPPORT COLL;01. Mai;Scale;MEAN($Q_S013_01,$Q_S013_02,$Q_S013_03,$Q_S013_04);MEAN
+$Q_S013_BZ;Number;S13 SUPPORT COLL Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S013_BV;Number;S13 SUPPORT COLL Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+$Q_S013_01;Number;S13 SUPPORT COLL Difficulties;1-5 / -1;Item;;
+$Q_S013_02;Number;S13 SUPPORT COLL Help;1-5 / -1;Item;;
+$Q_S013_03;Number;S13 SUPPORT COLL Respect;1-5 / -1;Item;;
+$Q_S013_04;Number;S13 SUPPORT COLL Listen;1-5 / -1;Item;;
+;;;;;;
+$Q_S014;Number;S14 SUPPORT LEAD;01. Mai;Scale;MEAN($Q_S014_01,$Q_S014_02,$Q_S014_03,$Q_S014_04,$Q_S014_05);MEAN
+$Q_S014_BZ;Number;S14 SUPPORT LEAD Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S014_BV;Number;S14 SUPPORT LEAD Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+$Q_S014_01;Number;S14 SUPPORT LEAD Feedback;1-5 / -1;Item;;
+$Q_S014_02;Number;S14 SUPPORT LEAD Help;1-5 / -1;Item;;
+$Q_S014_03;Number;S14 SUPPORT LEAD Talk;1-5 / -1;Item;;
+$Q_S014_04;Number;S14 SUPPORT LEAD Demand;1-5 / -1;Item;;
+$Q_S014_05;Number;S14 SUPPORT LEAD Encourage;1-5 / -1;Item;;
+;;;;;;
+$Q_S015;Number;S15 TRANSPARENCY;01. Mai;Scale;MEAN($Q_S015_01,$Q_S015_02,$Q_S015_03);MEAN
+$Q_S015_BZ;Number;S15 TRANSPARENCY Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S015_BV;Number;S15 TRANSPARENCY Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+$Q_S015_01;Number;S15 TRANSPARENCY Talk;1-5 / -1;Item;;
+$Q_S015_02;Number;S15 TRANSPARENCY Questions;1-5 / -1;Item;;
+$Q_S015_03;Number;S15 TRANSPARENCY Knowledge;1-5 / -1;Item;;
+;;;;;;
+$Q_S018;Number;S18 QUANT DEMANDS;01. Mai;Scale;MEAN($Q_S018_01,$Q_S018_02,$Q_S018_03,$Q_S018_04,$Q_S018_05,$Q_S018_06,$Q_S018_07,$Q_S018_08);MEAN
+$Q_S018_BZ;Number;S18 QUANT DEMANDS Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S018_BV;Number;S18 QUANT DEMANDS Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ>$B_CO_neg1;
+$Q_S018_01;Number;S18 QUANT DEMANDS Hours;1-5 / -1;Item;;
+$Q_S018_02;Number;S18 QUANT DEMANDS Deadlines;1-5 / -1;Item;;
+$Q_S018_03;Number;S18 QUANT DEMANDS Pace;1-5 / -1;Item;;
+$Q_S018_04;Number;S18 QUANT DEMANDS Intensity;1-5 / -1;Item;;
+$Q_S018_05;Number;S18 QUANT DEMANDS Load;1-5 / -1;Item;;
+$Q_S018_06;Number;S18 QUANT DEMANDS Contradiction;1-5 / -1;Item;;
+$Q_S018_07;Number;S18 QUANT DEMANDS Breaks;1-5 / -1;Item;;
+$Q_S018_08;Number;S18 QUANT DEMANDS Time;1-5 / -1;Item;;
+;;;;;;
+$Q_S019;Number;S19 QUAL DEMANDS;01. Mai;Scale;MEAN($Q_S019_01,$Q_S019_02,$Q_S019_03);MEAN
+$Q_S019_BZ;Number;S19 QUAL DEMANDS Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S019_BV;Number;S19 QUAL DEMANDS Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ>$B_CO_neg1;
+$Q_S019_01;Number;S19 QUAL DEMANDS Education;1-5 / -1;Item;;
+$Q_S019_02;Number;S19 QUAL DEMANDS Difficulty;1-5 / -1;Item;;
+$Q_S019_03;Number;S19 QUAL DEMANDS Complicated;1-5 / -1;Item;;
+;;;;;;
+$Q_S020;Number;S20 NEGATIVE RELATIONS;01. Mai;Scale;MEAN($Q_S020_01,$Q_S020_02,$Q_S020_03,$Q_S020_04);MEAN
+$Q_S020_BZ;Number;S20 NEGATIVE RELATIONS Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S020_BV;Number;S20 NEGATIVE RELATIONS Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ>$B_CO_neg1;
+$Q_S020_01;Number;S20 NEGATIVE RELATIONS Resentment;1-5 / -1;Item;;
+$Q_S020_02;Number;S20 NEGATIVE RELATIONS Harassment;1-5 / -1;Item;;
+$Q_S020_03;Number;S20 NEGATIVE RELATIONS Mobbing;1-5 / -1;Item;;
+$Q_S020_04;Number;S20 NEGATIVE RELATIONS Tension;1-5 / -1;Item;;
+;;;;;;
+$Q_S006;Number;S6 TOSCA;01. Mai;Scale;MEAN($Q_S006_01,$Q_S006_02,$Q_S006_04,$Q_S006_05,$Q_S006_06,$Q_S006_07,$Q_S006_09,$Q_S006_10,$Q_S006_11,$Q_S006_12);MEAN
+$Q_S006_BZ;Number;S6 TOSCA Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S006_BV;Number;S6 TOSCA Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+$Q_S006_DIS;Number;S6 TOSCA Dispersion;0-0.707;Value;STABW($Q_x)/$B_x_SR;COMPLEX4
+$Q_S006_DISV;String;S6 TOSCA Dispersion Valuation;tief, mittel, hoch;String;IF($Q_x_DIS<$B_CO_disp1;
+$Q_S006_N;Number;S6 TOSCA Valid N;;;;
+;;;;;;
+$Q_S006_PAR;Number;S6 TOSCA Participation;01. Mai;Subscale;MEAN($Q_S006_04,$Q_S006_09,$Q_S006_10);MEAN
+$Q_S006_PAR_BV;Number;S6 TOSCA Participation Benchmark Valuation;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S006_PAR_BZ;Number;S6 TOSCA Participation Benchmark Z-Value;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+;;;;;;
+$Q_S006_RES;Number;S6 TOSCA Resources;01. Mai;Subscale;MEAN($Q_S006_01,$Q_S006_02,$Q_S006_07);MEAN
+$Q_S006_RES_BV;Number;S6 TOSCA Resources Benchmark Valuation;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S006_RES_BZ;Number;S6 TOSCA Resources Benchmark Z-Value;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+;;;;;;
+$Q_S006_LEG;Number;S6 TOSCA Legitimacy;01. Mai;Subscale;MEAN($Q_S006_05,$Q_S006_06,$Q_S006_11,$Q_S006_12);MEAN
+$Q_S006_LEG_BV;Number;S6 TOSCA Legitimacy Benchmark Valuation;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S006_LEG_BZ;Number;S6 TOSCA Legitimacy Benchmark Z-Value;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+;;;1-5 / -1;;;
+$Q_S006_01;Number;S6 TOSCA Competency;1-5 / -1;Item;;
+$Q_S006_02;Number;S6 TOSCA Solution;1-5 / -1;Item;;
+$Q_S006_04;Number;S6 TOSCA Opinion;1-5 / -1;Item;;
+$Q_S006_05;Number;S6 TOSCA Talk;1-5 / -1;Item;;
+$Q_S006_06;Number;S6 TOSCA Inquire;1-5 / -1;Item;;
+$Q_S006_07;Number;S6 TOSCA Strength;1-5 / -1;Item;;
+$Q_S006_09;Number;S6 TOSCA Discussion;1-5 / -1;Item;;
+$Q_S006_10;Number;S6 TOSCA Perspectives;1-5 / -1;Item;;
+$Q_S006_11;Number;S6 TOSCA Impact;1-5 / -1;Item;;
+$Q_S006_12;Number;S6 TOSCA Needs;1-5 / -1;Item;;
+;;;;;;
+$Q_S091;Number;S91 MENTAL WELL-BEING;01. Mai;Scale;MEAN($Q_S091_01,$Q_S091_02,$Q_S091_03,$Q_S091_04,$Q_S091_05,$Q_S091_06,$Q_S091_07);MEAN
+$Q_S091_BZ;Number;S91 MENTAL WELL-BEING Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S091_BV;Number;S91 MENTAL WELL-BEING Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+$Q_S091_DIS;Number;S91 MENTAL WELL-BEING Dispersion;0-0.707;Value;STABW($Q_x)/$B_x_SR;COMPLEX4
+$Q_S091_DISV;String;S91 MENTAL WELL-BEING Dispersion Valuation;tief, mittel, hoch;String;IF($Q_x_DIS<$B_CO_disp1;
+$Q_S091_N;Number;S91 MENTAL WELL-BEING Valid N;;;;
+;;;;;;
+$Q_S091_01;Number;S91 MENTAL WELL-BEING Optimistic;1-5 / -1;Item;;
+$Q_S091_02;Number;S91 MENTAL WELL-BEING Useful;1-5 / -1;Item;;
+$Q_S091_03;Number;S91 MENTAL WELL-BEING Relaxed;1-5 / -1;Item;;
+$Q_S091_04;Number;S91 MENTAL WELL-BEING Mastery;1-5 / -1;Item;;
+$Q_S091_05;Number;S91 MENTAL WELL-BEING Thinking;1-5 / -1;Item;;
+$Q_S091_06;Number;S91 MENTAL WELL-BEING Relations;1-5 / -1;Item;;
+$Q_S091_07;Number;S91 MENTAL WELL-BEING Decisions;1-5 / -1;Item;;
+;;;;;;
+$Q_S037;Number;S37 EXHAUSTION;01. Mai;Scale;MEAN($Q_S037_01,$Q_S037_02,$Q_S037_03,$Q_S037_04);MEAN
+$Q_S037_BZ;Number;S37 EXHAUSTION Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S037_BV;Number;S37 EXHAUSTION Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ>$B_CO_neg1;
+$Q_S037_DIS;Number;S37 EXHAUSTION Dispersion;0-0.707;Value;STABW($Q_x)/$B_x_SR;COMPLEX4
+$Q_S037_DISV;String;S37 EXHAUSTION Dispersion Valuation;tief, mittel, hoch;String;IF($Q_x_DIS<$B_CO_disp1;
+$Q_S037_N;Number;S37 EXHAUSTION Valid N;;;;
+;;;;;;
+$Q_S037_01;Number;S37 EXHAUSTION Worn out;1-5 / -1;Item;;
+$Q_S037_02;Number;S37 EXHAUSTION Body;1-5 / -1;Item;;
+$Q_S037_03;Number;S37 EXHAUSTION Mind;1-5 / -1;Item;;
+$Q_S037_04;Number;S37 EXHAUSTION Tired;1-5 / -1;Item;;
+;;;;;;
+$Q_S031;Number;S31 WSoC;01. Jul;Scale;;
+$Q_S031_BZ;Number;S31 WSoC Benchmark Z-Value;-3 to +3;Z-Value;;
+$Q_S031_BV;Number;S31 WSoC Benchmark Valuation;Unicode;Emoji;;
+$Q_S031_DIS;Number;S31 WSoC Dispersion;0-0.707;Value;;
+$Q_S031_DISV;String;S31 WSoC Dispersion Valuation;tief, mittel, hoch;String;;
+;;;;;;
+$Q_S031_COM;Number;S31 WSoC Comprehensibility;01. Jul;Scale;;
+$Q_S031_COM_BZ;Number;S31 WSoC Comprehensibility Benchmark Z-Value;-3 to +3;Z-Value;;
+$Q_S031_COM_BV;Number;S31 WSoC Comprehensibility;Unicode;Emoji;;
+;;;;;;
+$Q_S031_MAN;Number;S31 WSoC Manageability;01. Jul;Scale;;
+$Q_S031_MAN_BZ;Number;S31 WSoC Manageability Benchmark Z-Value;-3 to +3;Z-Value;;
+$Q_S031_MAN_BV;Number;S31 WSoC Manageability Benchmark Valuation;Unicode;Emoji;;
+;;;;;;
+$Q_S031_MEA;Number;S31 WSoC Meaningfulness;01. Jul;Scale;;
+$Q_S031_MEA_BZ;Number;S31 WSoC Meaningfulness Benchmark Z-Value;-3 to +3;Z-Value;;
+$Q_S031_MEA_BV;Number;S31 WSoC Meaningfulness Benchmark Valuation;Unicode;Emoji;;
+;;;;;;
+$Q_S031_01;Number;S31 WSOC Manageability1;01. Jul;Item;;
+$Q_S031_01r;Number;S31 WSOC Manageability1;01. Jul;Item reversed;;RECODE_7
+$Q_S031_02;Number;S31 WSOC Meaninfulness1;01. Jul;Item;;
+$Q_S031_03;Number;S31 WSOC Comprehensibility1;01. Jul;Item;;
+$Q_S031_03r;Number;S31 WSOC Comprehensibility1;01. Jul;Item reversed;;RECODE_7
+$Q_S031_04;Number;S31 WSOC Manageability2;01. Jul;Item;;
+$Q_S031_04r;Number;S31 WSOC Manageability2;01. Jul;Item reversed;;RECODE_7
+$Q_S031_05;Number;S31 WSOC Meaninfulness2;01. Jul;Item;;
+$Q_S031_06;Number;S31 WSOC Comprehensibility2;01. Jul;Item;;
+$Q_S031_06r;Number;S31 WSOC Comprehensibility2;01. Jul;Item reversed;;RECODE_7
+$Q_S031_07;Number;S31 WSOC Manageability3;01. Jul;Item;;
+$Q_S031_07r;Number;S31 WSOC Manageability3;01. Jul;Item reversed;;RECODE_7
+$Q_S031_08;Number;S31 WSOC Meaninfulness3;01. Jul;Item;;
+$Q_S031_09;Number;S31 WSOC Comprehensibility3;01. Jul;Item;;
+$Q_S031_09r;Number;S31 WSOC Comprehensibility3;01. Jul;Item reversed;;RECODE_7
+;;;;;;
+$Q_S130;Number;S130 HOL Self;01. Mai;Scale;MEAN(all items listed below);MEAN
+$Q_S131;Number;S131 HOL Staff;01. Mai;Scale;MEAN(all items listed below);MEAN
+;;;;;;
+$Q_S130_D;Number;S130 HOL Self Stress;01. Mai;Subscale;MEAN($C_S130_01,$C_S130_03,$C_S130_05);MEAN
+$Q_S130_R;Number;S130 HOL Self Engagment;01. Mai;Subscale;MEAN($C_S130_02,$C_S130_04,$C_S130_06);MEAN
+;;;;;;
+$Q_S131_D;Number;S131 HOL Staff Stress;01. Mai;Subscale;MEAN($C_S131_01,$C_S131_03,$C_S131_05);MEAN
+$Q_S131_R;Number;S131 HOL Staff Engagment;01. Mai;Subscale;MEAN($C_S131_02,$C_S131_04,$C_S131_06);MEAN
+;;;;;;
+$Q_S130_01;Number;S130 HOL Self Stress 1;1-5 / -1;Item;;
+$Q_S130_02;Number;S130 HOL Self Engagment 1;1-5 / -1;Item;;
+$Q_S130_03;Number;S130 HOL Self Stress 2;1-5 / -1;Item;;
+$Q_S130_04;Number;S130 HOL Self Engagment 3;1-5 / -1;Item;;
+$Q_S130_05;Number;S130 HOL Self Stress 3;1-5 / -1;Item;;
+$Q_S130_06;Number;S130 HOL Self Engagment 3;1-5 / -1;Item;;
+;;;;;;
+$Q_S131_01;Number;S131 HOL Staff Stress 1;1-5 / -1;Item;;
+$Q_S131_02;Number;S131 HOL Staff Engagment 1;1-5 / -1;Item;;
+$Q_S131_03;Number;S131 HOL Staff Stress 2;1-5 / -1;Item;;
+$Q_S131_04;Number;S131 HOL Staff Engagment 3;1-5 / -1;Item;;
+$Q_S131_05;Number;S131 HOL Staff Stress 3;1-5 / -1;Item;;
+$Q_S131_06;Number;S131 HOL Staff Engagment 3;1-5 / -1;Item;;
+;;;;;;
+$Q_S199;Number;S199 Team Self-Efficacy;01. Mai;Scale;MEAN(all items listed below);MEAN
+;;;;;;
+$Q_S199_01;Number;S199 TSWE Stress;1-5 / -1;Item;;
+$Q_S199_02;Number;S199 TSWE Engagement;1-5 / -1;Item;;
+$Q_S199_03;Number;S199 TSWE Survey;1-5 / -1;Item;;
+$Q_S199_04;Number;S199 TSWE Workshop;1-5 / -1;Item;;
+$Q_S199_05;Number;S199 TSWE Solution;1-5 / -1;Item;;
+;;;;;;
+QUICK-CHECK Engagement + Stress;;;;;;
+;;;;;;
+$Q_S033_PA_QC;Number;S33 POSITIVE ACTIVATION;01. Jul;Scale;MEAN($Q_S033_02r_QC,$Q_S033_04_QC,$Q_S033_07_QC,$Q_S033_09r_QC);MEAN
+$Q_S033_PA_QC_BZ;Number;S33 POSITIVE ACTIVATION Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S033_PA_QC_BV;Number;S33 POSITIVE ACTIVATION Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;
+;;;;;;
+$Q_S033_NA_QC;Number;S33 NEGATIVE ACTIVATION;01. Jul;Scale;MEAN($Q_S033_03r_QC,$Q_S033_05_QC,$Q_S033_08_QC,$Q_S033_10r_QC);MEAN
+$Q_S033_NA_QC_BZ;Number;S33 NEGATIVE ACTIVATION Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1
+$Q_S033_NA_QC_BV;Number;S33 NEGATIVE ACTIVATION Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ>$B_CO_neg1;
+;;;;;;
+$Q_S033_02_QC;Number;S33 POSITIVE ACTIVATION Energy;01. Jul;Item;;
+$Q_S033_02r_QC;Number;S33 POSITIVE ACTIVATION Energy rev;01. Jul;Item reversed;RECODE $Q_S033_02_QC INTO $Q_S033_02r_QC (7=1,6=2,5=3,4=4,3=5,2=6,1=7);RECODE_7
+$Q_S033_03_QC;Number;S33 NEGATIVE ACTIVATION Stress;01. Jul;Item;;
+$Q_S033_03r_QC;Number;S33 NEGATIVE ACTIVATION Stress rev;01. Jul;Item reversed;RECODE $Q_S033_03_QC INTO $Q_S033_03r_QC (7=1,6=2,5=3,4=4,3=5,2=6,1=7);RECODE_7
+$Q_S033_04_QC;Number;S33 POSITIVE ACTIVATION Awake;01. Jul;Item;;
+$Q_S033_05_QC;Number;S33 NEGATIVE ACTIVATION Angry;01. Jul;Item;;
+$Q_S033_06_QC;Number;S33 VALENCE Happy;01. Jul;Item;;
+$Q_S033_07_QC;Number;S33 POSITIVE ACTIVATION Motivated;01. Jul;Item;;
+$Q_S033_08_QC;Number;S33 NEGATIVE ACTIVATION Nervous;01. Jul;Item;;
+$Q_S033_09_QC;Number;S33 POSITIVE ACTIVATION Thrilled;01. Jul;Item;;
+$Q_S033_09r_QC;Number;S33 POSITIVE ACTIVATION Thrilled rev;01. Jul;Item reversed;RECODE $Q_S033_09_QC INTO $Q_S033_09r_QC (7=1,6=2,5=3,4=4,3=5,2=6,1=7);RECODE_7
+$Q_S033_10_QC;Number;S33 NEGATIVE ACTIVATION Concerned;01. Jul;Item;;
+$Q_S033_10r_QC;Number;S33 NEGATIVE ACTIVATION Concerned rev;01. Jul;Item reversed;RECODE $Q_S033_10_QC INTO $Q_S033_10r_QC (7=1,6=2,5=3,4=4,3=5,2=6,1=7);RECODE_7

@@ -1,0 +1,200 @@
+Variable;Format;Name;Values;Type;Computation / Comment;Operator;;;
+;;;;;;;;;
+IC SURVEYS;;;;;;;;;
+;;;;;;;;;
+IC_SWE;;;;;;;;;
+;;;;;;;;;
+$C_S125_FK_IC;Number;S125 SWE Leader;1-100%;Scale;MEAN(all single Items below);MEAN;;;
+;;;;;;;;;
+$C_S125_FK_IC_DELTA;Number;S125 SWE Leader Differenz zur letzten Befragung;1-99%;Value;$C_S125_FK_IC - $C_S125_FK_IC_HISTORY_1;;;;
+;;;;;;;;;
+$C_S125_01_FK_IC;Number;S125 SWE Leader 1;1-100% / -1;Item;;;;;Missing?
+$C_S125_02_FK_IC;Number;S125 SWE Leader 2;1-100% / -1;Item;;;;;Missing?
+$C_S125_03_FK_IC;Number;S125 SWE Leader 3;1-100% / -1;Item;;;;;Missing?
+$C_S125_04_FK_IC;Number;S125 SWE Leader 4;1-100% / -1;Item;;;;;Missing?
+$C_S125_05_FK_IC;Number;S125 SWE Leader 5;1-100% / -1;Item;;;;;Missing?
+;;;;;;;;;
+IC_TOSCALead;;;;;;;;;
+;;;;;;;;;
+$C_S006_FK_IC;Number;S6 TOSCA Leader Perspective;01. Mai;Scale;MEAN(all single Items below);MEAN;;;Missing?
+$C_S006_FK_IC_BZ;Number;S6 TOSCA Leader Perspective Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;Missing?
+$C_S006_FK_IC_BV;Number;S6 TOSCA Leader Perspective Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;;;;Missing?
+;;;;;;;;;Missing?
+$C_S006_PAR_FK_IC;Number;S6 TOSCA Participation Leader Perspective;01. Mai;Subscale;MEAN($C_S006_04_FK_IC,$C_S006_09_FK_IC,$C_S006_10_FK_IC);MEAN;;;Missing?
+$C_S006_PAR_FK_IC_BZ;Number;S6 TOSCA Participation Leader Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;Missing?
+$C_S006_PAR_FK_IC_BV;Number;S6 TOSCA Participation Leader Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;;;;Missing?
+;;;;;;;;;Missing?
+$C_S006_RES_FK_IC;Number;S6 TOSCA Resources Leader Perspective;01. Mai;Subscale;MEAN($C_S006_01_FK_IC,$C_S006_02_FK_IC,$C_S006_07_FK_IC);MEAN;;;Missing?
+$C_S006_RES_FK_IC_BZ;Number;S6 TOSCA Resources Leader Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;Missing?
+$C_S006_RES_FK_IC_BV;Number;S6 TOSCA Resources Leader Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;;;;Missing?
+;;;;;;;;;Missing?
+$C_S006_LEG_FK_IC;Number;S6 TOSCA Legitimacy Leader Perspective;01. Mai;Subscale;MEAN($C_S006_05_FK_IC,$C_S006_06_FK_IC,$C_S006_11_FK_IC,$C_S006_12_FK_IC);MEAN;;;Missing?
+$C_S006_LEG_FK_IC_BZ;Number;S6 TOSCA Legitimacy Leader Perspective Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;Missing?
+$C_S006_LEG_FK_IC_BV;Number;S6 TOSCA Legitimacy Leader Perspective Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;;;;Missing?
+;;;;;;;;;
+$C_S006_01_FK_IC;Number;S6 TOSCA Leader Competency;1-5 / -1;Item;;;;;Missing?
+$C_S006_02_FK_IC;Number;S6 TOSCA Leader Solution;1-5 / -1;Item;;;;;Missing?
+$C_S006_04_FK_IC;Number;S6 TOSCA Leader Opinion;1-5 / -1;Item;;;;;Missing?
+$C_S006_05_FK_IC;Number;S6 TOSCA Leader Talk;1-5 / -1;Item;;;;;Missing?
+$C_S006_06_FK_IC;Number;S6 TOSCA Leader Inquire;1-5 / -1;Item;;;;;Missing?
+$C_S006_07_FK_IC;Number;S6 TOSCA Leader Strength;1-5 / -1;Item;;;;;Missing?
+$C_S006_09_FK_IC;Number;S6 TOSCA Leader Discussion;1-5 / -1;Item;;;;;Missing?
+$C_S006_10_FK_IC;Number;S6 TOSCA Leader Perspectives;1-5 / -1;Item;;;;;Missing?
+$C_S006_11_FK_IC;Number;S6 TOSCA Leader Impact;1-5 / -1;Item;;;;;Missing?
+$C_S006_12_FK_IC;Number;S6 TOSCA Leader Needs;1-5 / -1;Item;;;;;Missing?
+;;;;;;;;;
+IC_ILEAD;;;;;;;;;
+;;;;;;;;;
+$C_S105_FK_IC;Number;S105 iLEAD (FK Baseline Context);01. Mai;Scale;MEAN(all single Items below);MEAN;;;
+;;;;;;;;;
+$C_S105_a_FK_IC;Number;S105 a iLEAD Example (FK Baseline Context);01. Mai;Scale;MEAN($C_S105_a4_FK_IC,$C_S105_a5_FK_IC);MEAN2;;;
+$C_S105_b_FK_IC;Number;S105 b iLEAD Consideration (FK Baseline Context);01. Mai;Scale;MEAN($C_S105_b1_FK_IC,$C_S105_b3_FK_IC);MEAN2;;;
+$C_S105_c_FK_IC;Number;S105 c iLEAD Stimulation (FK Baseline Context);01. Mai;Scale;MEAN($C_S105_c1_FK_IC,$C_S105_c3_FK_IC);MEAN2;;;
+$C_S105_d_FK_IC;Number;S105 d iLEAD Reward (FK Baseline Context);01. Mai;Scale;MEAN($C_S105_d1_FK_IC,$C_S105_d2_FK_IC);MEAN2;;;
+;;;;;;;;;
+$C_S105_a4_FK_IC;Number;S105 a4 iLEAD Example1 (FK Baseline Context);1-5 / -1;Item;;;;;
+$C_S105_a5_FK_IC;Number;S105 a5 iLEAD Example2 (FK Baseline Context);1-5 / -1;Item;;;;;
+$C_S105_b1_FK_IC;Number;S105 b1 iLEAD Consideration1 (FK Baseline Context);1-5 / -1;Item;;;;;
+$C_S105_b3_FK_IC;Number;S105 b3 iLEAD Consideration2 (FK Baseline Context);1-5 / -1;Item;;;;;
+$C_S105_c1_FK_IC;Number;S105 c1 iLEAD Stimulation1 (FK Baseline Context);1-5 / -1;Item;;;;;
+$C_S105_c3_FK_IC;Number;S105 c3 iLEAD Stimulation2 (FK Baseline Context);1-5 / -1;Item;;;;;
+$C_S105_d1_FK_IC;Number;S105 d1 iLEAD Reward1 (FK Baseline Context);1-5 / -1;Item;;;;;
+$C_S105_d2_FK_IC;Number;S105 d2 iLEAD Reward2 (FK Baseline Context);1-5 / -1;Item;;;;;
+;;;;;;;;;
+IC_HSEshort;;;;;;;;;
+;;;;;;;;;
+$C_S009_FK_IC;Number;HSE short S9 Control;01. Mai;Scale;MEAN($C_S009_05_FK_IC);MEAN2;;;
+$C_S010_FK_IC;Number;HSE short S10 Role;01. Mai;Scale;MEAN($C_S010_02_FK_IC);MEAN2;;;
+$C_S011_FK_IC;Number;HSE short S11 Competency;01. Mai;Scale;MEAN($C_S011_01_FK_IC);MEAN2;;;
+$C_S012_FK_IC;Number;HSE short S12 Variety;01. Mai;Scale;MEAN($C_S012_02_FK_IC);MEAN2;;;
+$C_S013_FK_IC;Number;HSE short S13 Support Coll;01. Mai;Scale;MEAN($C_S013_02_FK_IC);MEAN2;;;
+$C_S014_FK_IC;Number;HSE short S14 Support Lead;01. Mai;Scale;MEAN($C_S014_02_FK_IC,$C_S014_05_FK_IC);MEAN2;;;
+$C_S015_FK_IC;Number;HSE short S15 Transparency;01. Mai;Scale;MEAN($C_S015_03_FK_IC);MEAN2;;;
+$C_S018_FK_IC;Number;HSE short S18 Quant Demands;01. Mai;Scale;MEAN($C_S018_05_FK_IC,$C_S018_08_FK_IC);MEAN2;;;
+$C_S019_FK_IC;Number;HSE short S19 Qual Demands;01. Mai;Scale;MEAN($C_S019_02_FK_IC);MEAN2;;;
+$C_S020_FK_IC;Number;HSE short S20 Negative Relations;01. Mai;Scale;MEAN($C_S020_02_FK_IC);MEAN2;;;
+;;;;;;;;;
+$C_S009_05_FK_IC;Number;HSE short S9 Control Item;1-5 / -1;Item;;;;;
+$C_S010_02_FK_IC;Number;HSE short S10 Role Item;1-5 / -1;Item;;;;;
+$C_S011_01_FK_IC;Number;HSE short S11 Competency Item;1-5 / -1;Item;;;;;
+$C_S012_02_FK_IC;Number;HSE short S12 Variety Item;1-5 / -1;Item;;;;;
+$C_S013_02_FK_IC;Number;HSE short S13 Support Coll Item;1-5 / -1;Item;;;;;
+$C_S014_02_FK_IC;Number;HSE short S14 Support Lead Item;1-5 / -1;Item;;;;;
+$C_S014_05_FK_IC;Number;HSE short S14 Support Lead Item;1-5 / -1;Item;;;;;
+$C_S015_03_FK_IC;Number;HSE short S15 Transparency Item;1-5 / -1;Item;;;;;
+$C_S018_05_FK_IC;Number;HSE short S18 Quant Demands Item;1-5 / -1;Item;;;;;
+$C_S018_08_FK_IC;Number;HSE short S18 Quant Demands Item;1-5 / -1;Item;;;;;
+$C_S019_02_FK_IC;Number;HSE short S19 Qual Demands Item;1-5 / -1;Item;;;;;
+$C_S020_02_FK_IC;Number;HSE short S20 Negative Relations Item;1-5 / -1;Item;;;;;
+;;;;;;;;;
+$C_S009_FK_IC_BZ;Number;HSE short S9 Control Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;
+$C_S010_FK_IC_BZ;Number;HSE short S10 Role Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;
+$C_S011_FK_IC_BZ;Number;HSE short S11 Competency Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;
+$C_S012_FK_IC_BZ;Number;HSE short S12 Variety Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;
+$C_S013_FK_IC_BZ;Number;HSE short S13 Support Coll Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;
+$C_S014_FK_IC_BZ;Number;HSE short S14 Support Lead Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;
+$C_S015_FK_IC_BZ;Number;HSE short S15 Transparency Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;
+$C_S018_FK_IC_BZ;Number;HSE short S18 Quant Demands Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;
+$C_S019_FK_IC_BZ;Number;HSE short S19 Qual Demands Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;
+$C_S020_FK_IC_BZ;Number;HSE short S20 Negative Relations Benchmark Z-Value;-3 to +3;Z-Value;($Q_x-$B_x_PM)/$B_x_PS;COMPLEX1;;;
+;;;;;;;;;
+$C_S009_FK_IC_BV;Number;HSE short S9 Control Benchmark Z-Value;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;;;;
+$C_S010_FK_IC_BV;Number;HSE short S10 Role Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;;;;
+$C_S011_FK_IC_BV;Number;HSE short S11 Competency Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;;;;
+$C_S012_FK_IC_BV;Number;HSE short S12 Variety Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;;;;
+$C_S013_FK_IC_BV;Number;HSE short S13 Support Coll Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;;;;
+$C_S014_FK_IC_BV;Number;HSE short S14 Support Lead Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;;;;
+$C_S015_FK_IC_BV;Number;HSE short S15 Transparency Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ<$B_CO_pos1;;;;
+$C_S018_FK_IC_BV;Number;HSE short S18 Quant Demands Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ>$B_CO_neg1;;;;
+$C_S019_FK_IC_BV;Number;HSE short S19 Qual Demands Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ>$B_CO_neg1;;;;
+$C_S020_FK_IC_BV;Number;HSE short S20 Negative Relations Benchmark Valuation;Unicode;Emoji;IF($Q_x_BZ>$B_CO_neg1;;;;
+;;;;;;;;;
+IC_HOL;;;;;;;;;
+;;;;;;;;;
+$C_S130_FK_IC;Number;S130 HOL Leader Self;01. Mai;Scale;MEAN(all items listed below);MEAN;;;
+$C_S131_FK_IC;Number;S131 HOL Leader Staff;01. Mai;Scale;MEAN(all items listed below);MEAN;;;
+;;;;;;;;;
+$C_S130_D_FK_IC;Number;S130 HOL Leader Self Stress;01. Mai;Subscale;MEAN($C_S130_01_FK_IC,$C_S130_03_FK_IC,$C_S130_05_FK_IC);MEAN;;;
+$C_S130_R_FK_IC;Number;S130 HOL Leader Self Engagment;01. Mai;Subscale;MEAN($C_S130_02_FK_IC,$C_S130_04_FK_IC,$C_S130_06_FK_IC);MEAN;;;
+;;;;;;;;;
+$C_S131_D_FK_IC;Number;S131 HOL Leader Staff Stress;01. Mai;Subscale;MEAN($C_S131_01_FK_IC,$C_S131_03_FK_IC,$C_S131_05_FK_IC);MEAN;;;
+$C_S131_R_FK_IC;Number;S131 HOL Leader Staff Engagment;01. Mai;Subscale;MEAN($C_S131_02_FK_IC,$C_S131_04_FK_IC,$C_S131_06_FK_IC);MEAN;;;
+;;;;;;;;;
+$C_S130_01_FK_IC;Number;S130 HOL Leader Self Stress 1;1-5 / -1;Item;;;;;
+$C_S130_02_FK_IC;Number;S130 HOL Leader Self Engagment 1;1-5 / -1;Item;;;;;
+$C_S130_03_FK_IC;Number;S130 HOL Leader Self Stress 2;1-5 / -1;Item;;;;;
+$C_S130_04_FK_IC;Number;S130 HOL Leader Self Engagment 3;1-5 / -1;Item;;;;;
+$C_S130_05_FK_IC;Number;S130 HOL Leader Self Stress 3;1-5 / -1;Item;;;;;
+$C_S130_06_FK_IC;Number;S130 HOL Leader Self Engagment 3;1-5 / -1;Item;;;;;
+;;;;;;;;;
+$C_S131_01_FK_IC;Number;S131 HOL Leader Staff Stress 1;1-5 / -1;Item;;;;;
+$C_S131_02_FK_IC;Number;S131 HOL Leader Staff Engagment 1;1-5 / -1;Item;;;;;
+$C_S131_03_FK_IC;Number;S131 HOL Leader Staff Stress 2;1-5 / -1;Item;;;;;
+$C_S131_04_FK_IC;Number;S131 HOL Leader Staff Engagment 3;1-5 / -1;Item;;;;;
+$C_S131_05_FK_IC;Number;S131 HOL Leader Staff Stress 3;1-5 / -1;Item;;;;;
+$C_S131_06_FK_IC;Number;S131 HOL Leader Staff Engagment 3;1-5 / -1;Item;;;;;
+;;;;;;;;;
+FORMULARE;;;;;;;;;
+;;;;;;;;;
+CoachingExperience;;;;;;;;;
+;;;;;;;;;
+$C_EXPERIENCE_COACHING1;String;Erfahrung der FK mit Coaching;Text;;;;;;
+$C_EXPERIENCE_COACHING2;String;Thema Arbeit, Engagement, Stress und Gesundheit;Text;;;;;;
+;;;;;;;;;
+BrainstormingJDForm;;;;;;;;;
+;;;;;;;;;
+$O_BRAINSTORM_JD;String;Aspekte der Arbeit, die FK motivieren;Text;;(Legacy $O statt $C);;;;
+;;;;;;;;;
+BrainstormingJRForm;;;;;;;;;
+;;;;;;;;;
+$O_BRAINSTORM_JR;String;Aspekte der Arbeit, die FK stressen;Text;;(Legacy $O statt $C);;;;
+;;;;;;;;;
+ReturnBrainstormForm;;;;;;;;;
+;;;;;;;;;
+$O_BRAINSTORM_ROI_SELF;String;Wahrgenommener Nutzen des wecoach f체r sich;Text;;(Legacy $O statt $C);;;;
+$O_BRAINSTORM_ROI_TEAM;String;Wahrgenommener Nutzen des wecoach f체r das Team;Text;;(Legacy $O statt $C);;;;
+;;;;;;;;;
+ContextForm;;;;;;;;;
+;;;;;;;;;
+$C_001;Number;Team size;1-n;needed;;;;;
+$C_005;Number;Leader team duration;1-n;needed;;;;;
+$C_006;Number;Leader tenure;1-n;needed;;;;;
+$C_007;Number;Leader age;1-n;needed;;;;;
+$C_030;Number;Supportiveness Team;01. Jul;needed;begrenzen;;;;
+$C_031;Number;Supportiveness Leader;01. Jul;needed;begrenzen;;;;
+$C_032;Number;Supportiveness Company;01. Jul;needed;begrenzen;;;;
+$C_033;Number;Supportiveness Climate Total;Jan 21;needed;$C_030+$C_031+$C_032 (funktioniert nur, wenn alles ausgef체llt);PLUS;;;
+;;;;;;;;;
+BrainstormingLeaderWellbeing;;;;;;;;;
+;;;;;;;;;
+$O_BRAINSTORM_SELFCARE;String;Leader Selfcare;Text;;(Legacy $O statt $C);;;;
+;;;;;;;;;
+DriversHindrancesForm;;;;;;;;;
+;;;;;;;;;
+$C_Drivers;String;Treiber;Text;;;;;;
+$C_Drivers_Solution;String;Treiber st채rken;Text;;;;;;
+$C_Hindrances;String;Hindernisse;Text;;;;;;
+$C_Hindrances_Solution;String;Hindernisse abbauen;Text;;;;;;
+;;;;;;;;;
+CHAT BUTTONS + TEXT;;;;;;;;;
+;;;;;;;;;
+Session A1;;;;;;;;;
+;;;;;;;;;
+$C_TIMECOACHING;String;Zeit pro Woche f체r wecoach;0-n;needed;;;;;
+;;;;;;;;;
+KONTO;;;;;;;;;
+;;;;;;;;;
+osm_organization_xxx;Number;Branch;01. M둹;needed;check;;;Missing?;
+osm_organization_field;String;Branch detail;Text;;check;;;Missing?;
+osm_organization_size;Number;Company size;01. M둹;needed;check;;;Missing?;
+osm_name;String;Leader name;Text;;check;;;Missing?;
+osm_sex;Number;Leader sex;01. Feb;needed;check;;;Missing?;
+osm_job_position;Number;Function;n;;check;;;Missing?;
+osm_job_since;Number;Function since;n;;check;;;Missing?;
+osm_team_size;Number;Team size;01. M둹;needed;check;;;Missing?;
+;;;;;;;;;
+$wecoachAGB;Number;AGB akzeptiert (1);1/0;;;;;;
+$wecoachUpdates;Number;Updates per E-Mail erhalten (1);1/0;;;;;;
+$wecoachScience;Number;Daten f체r wiss. Nutzung erlauben (1);1/0;;;;;;
+$wecoachScienceFill;Number;Daten f체r wiss. Nutzung erlauben beantwortet;1-n;;;;;;
+$wecoachTeamcode;Number;Code f체r Teamportal;n;;;;;;
