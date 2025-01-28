@@ -14,7 +14,11 @@ Statistical Analysis: Methods used to examine the relationship between contextua
 
 # Repository Structure
 /data: Contains anonymized example datasets.
+
+
 /scripts: Includes all R scripts for data preprocessing, statistical analysis, and visualization.
+
+
 /results: Outputs such as processed data files and key visualizations.
 
 # Packages
